@@ -35,7 +35,7 @@ const Login = (props) => {
   });
   const [formIsValid, setFormIsValid] = useState(false);
 
-  const { isValid: isEmailValid } = emailState; // Object destructuring and name alias
+  const { isValid: isEmailValid } = emailState; // Object destructuring and aliasing
   const { isValid: isPasswordValid } = passwordState;
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Login = (props) => {
     );
 
     return () => clearTimeout(timeoutId);
-  }, [isEmailValid, isPasswordValid]);
+  }, [isEmailValid, isPasswordValid]); // Or [emailState.isValid, passwordState.isValid]
 
   const emailChangeHandler = (event) =>
     dispatchEmail({ type: "EMAIL_CHANGE", value: event.target.value });
@@ -103,6 +103,6 @@ const Login = (props) => {
       </form>
     </Card>
   );
-};
+};;;
 
 export default Login;
