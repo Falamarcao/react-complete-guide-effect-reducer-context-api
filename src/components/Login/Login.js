@@ -27,13 +27,8 @@ const Login = (props) => {
 
   const emailChangeHandler = (event) => setEnteredEmail(event.target.value);
 
-  const passwordChangeHandler = (event) => {
+  const passwordChangeHandler = (event) =>
     setEnteredPassword(event.target.value);
-
-    setFormIsValid(
-      event.target.value.trim().length > 6 && enteredEmail.includes("@")
-    );
-  };
 
   const validateEmailHandler = () =>
     setEmailIsValid(enteredEmail.includes("@"));
