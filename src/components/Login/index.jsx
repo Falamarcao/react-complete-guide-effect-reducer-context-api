@@ -72,20 +72,20 @@ const Login = () => {
     <Card className={styles.login}>
       <form onSubmit={submitHandler}>
         <Input
-          valid={isEmailValid}
-          label="E-mail"
-          type="email"
           id="email"
+          type="email"
+          label="E-mail"
           value={emailState.value}
+          isValid={isEmailValid}
           onChange={emailChangeHandler}
           onBlur={validateEmailHandler}
         />
         <Input
-          valid={isPasswordValid}
-          label="Password"
-          type="password"
           id="password"
+          type="password"
+          label="Password"
           value={passwordState.value}
+          isValid={isPasswordValid}
           onChange={passwordChangeHandler}
           onBlur={validatePasswordHandler}
         />
